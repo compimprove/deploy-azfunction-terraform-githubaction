@@ -57,6 +57,6 @@ resource "azurerm_linux_function_app" "simpleapp_app" {
       node_version = 20
     }
   }
-  lifecycle { ignore_changes = [app_settings["WEBSITE_RUN_FROM_PACKAGE"]] }
+  lifecycle { ignore_changes = [app_settings["WEBSITE_RUN_FROM_PACKAGE"], app_settings["WEBSITE_ENABLE_SYNC_UPDATE_SITE"]] }
 }
 
